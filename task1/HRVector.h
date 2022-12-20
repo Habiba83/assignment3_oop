@@ -92,14 +92,17 @@ public:
     // capacity operations
     int get_size() const
     {
+        // returning size
         return v_size;
     }
     int get_capacity() const
     {
+        // returning capacity
         return capacity;
     }
     bool empty()
     {
+        // checking if the vector is empty
         if (v_size == 0)
         {
             return true;
@@ -187,15 +190,14 @@ public:
     }
     Iterator end()
     {
-        int end = this->v_size;
-        return &Aptr[end];
+        // int end = this->v_size;
+        return &Aptr[this->v_size];
     }
     void erase(const Iterator i)
     {
         if (i > this->end() || i < this->begin())
             throw "index out of range";
         HRvector<T> temp(0);
-        int j = 0;
         Iterator t = this->begin();
         for (int k = 0; k < this->v_size; k++)
         {
