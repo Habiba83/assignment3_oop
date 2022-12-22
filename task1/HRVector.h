@@ -225,7 +225,7 @@ public:
             temp.push_back(this->Aptr[i]);
             i++;
         }
-        for (Iterator t = this->end(); t > i2; t--)
+        for (Iterator t = this->end()-1; t > i2; t--)
         {
             temp.push_back(this->Aptr[j]);
             j--;
